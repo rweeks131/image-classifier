@@ -1,0 +1,8 @@
+fastapi
+h11
+gluoncv
+mxnet
+requests
+Pillow
+python-multipart
+uvicorn
