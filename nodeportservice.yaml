@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kube-node-port
+spec:
+  type: NodePort
+  ports:
+    - port: 100
+      targetPort: 100
+      nodePort: 31515
+  selector:
+    app: web
