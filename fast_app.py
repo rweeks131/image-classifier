@@ -11,7 +11,7 @@ from fastapi import FastAPI, Request, File, UploadFile
 import uvicorn
 import subprocess
 
-#initiate a fast api as the app
+#initiate fast api as the app
 app = FastAPI()
 
 #If a get request is pushed to this app, along with no further instruction, 
