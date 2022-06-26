@@ -18,6 +18,7 @@ check that the container is working by using-> localhost:5000 , in any browser.
 
 
 [USING THE POD.YAML AND NODEPORTSERVICE.YAML FILES (delete the deployment.yaml,ingress.yaml and imclass-cluster-ip-service.yaml files)]
+
 To serve the container via minikube, use the following:
 > minikube start
 
