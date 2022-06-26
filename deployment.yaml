@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image-classifier-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: imclass
+  template:
+    metadata:
+      labels:
+        app: imclass
+    spec:
+      containers:
+      - name: image-classifier
+        image: rweek131/image-clsfr
+        ports:
+        - containerPort: 100
