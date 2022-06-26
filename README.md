@@ -9,12 +9,15 @@ The server should then be connected to your localhost using port 8000. Check tha
 
 (Using Postman) To make a prediction based on an image you have (your image MUST be a .jpg and must be renamed 'image.jpg'), use the following-> localhost:8000/predict , in the url and make sure the image is attached in the body of a 'POST' request. (Note that the original request was using the GET method, while the prediction request uses the POST method). 
 
+
 To containerize the model make sure docker is running on your machine. Now use the following commands in the same directory that you put the files:
 > docker build -t fast_app .
 > docker run -p 5000:100 fast_app
 
 check that the container is working by using-> localhost:5000 , in any browser. 
 
+
+[USING THE POD.YAML AND NODEPORTSERVICE.YAML FILES (delete the deployment.yaml,ingress.yaml and imclass-cluster-ip-service.yaml files)]
 To serve the container via minikube, use the following:
 > minikube start
 
@@ -30,6 +33,20 @@ To test if the pod was exposed properly, use-> localhost:5000 , in any browser. 
 
 To test if the node service was exposed properly use-> localhost:5000 , in any browser.
 
-This Kubernetes cluster is not currently deployed to any cloud service, but I plan to work on having the cluster deployed in the near future.
+
+[USING THE DEPLOYMENT.YAML,INGRESS.YAML, AND IMCLASS-CLUSTER-IP-SERVICE.YAML FILES (delete the nodeportservice.yaml and pod.yaml files)]
+
+To serve the container via minikube, use the following:
+> minikube start
+
+>kubectl apply -f image-classifier
+
+>minikube addons enable ingress 
+
+>minikube tunnel
+
+and check that the port to the program is exposed by using -> localhost , in any browswer.
+
+This Kubernetes cluster has not been deployed to any cloud service, but I plan to work on deploying the cluster in the near future.
 
 
