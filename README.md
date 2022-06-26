@@ -17,7 +17,9 @@ check that the container is working by using-> localhost:5000 , in any browser.
 
 To serve the container via minikube, use the following:
 > minikube start
+
 > kubectl apply -f pod.yaml
+
 > kubectl apply -f nodeportservice.yaml
 
 and check to make sure both the pod and service are working properly by exposing both to localhost. To expose the pod, use:
