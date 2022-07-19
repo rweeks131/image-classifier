@@ -12,6 +12,7 @@ The server should then be connected to your localhost using port 8000. Check tha
 
 To containerize the model make sure docker is running on your machine. Now use the following commands in the same directory that you put the files:
 > docker build -t fast_app .
+
 > docker run -p 5000:100 fast_app
 
 check that the container is working by using-> localhost:5000 , in any browser. 
