@@ -47,8 +47,8 @@ To serve the container via minikube, use the following:
 
 >minikube tunnel
 
-and check that the port to the program is exposed by using -> localhost , in any browswer.
+and check that the port to the program is exposed by using -> localhost, in any browswer.
 
-This Kubernetes cluster has not been deployed to any cloud service, but I plan to work on deploying the cluster in the near future.
+This Kubernetes cluster has been deployed using the Google Kubernetes Engine (GKE) using a load balancer. To use this, you need to have access to GKE and use the load_balancer.yaml file with the files used for minikube deployment shown above.
 
 
